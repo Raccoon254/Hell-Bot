@@ -361,12 +361,15 @@ const Home = ({
     >
       <Head>
         <title>HellBot UI</title>
-        <meta name="description" content="ChatGPT but better." />
+        <meta
+          name="description"
+          content="HellBot to the World -->Welcome To Hell By Bots."
+        />
         <meta
           name="viewport"
           content="height=device-height ,width=device-width, initial-scale=1, user-scalable=no"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://stevosoro.xyz/favicon.ico" />
       </Head>
       {selectedConversation && (
         <main

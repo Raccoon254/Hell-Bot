@@ -381,7 +381,7 @@ export const ChatInput = ({
       </div>
       <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
-          href="https://github.com/mckaywrigley/HellBot-ui"
+          href="https://github.com/Raccoon254/Hell-Bot"
           target="_blank"
           rel="noreferrer"
           className="underline"
@@ -390,7 +390,7 @@ export const ChatInput = ({
         </a>
         .{' '}
         {t(
-          "HellBot UI is an advanced HellBot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
+          'HellBot is a Raccoon test project that can be Discontinued without notice.',
         )}
       </div>
     </div>
