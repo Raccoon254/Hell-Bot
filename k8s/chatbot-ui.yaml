@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: HellBot-ui
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: HellBot-ui
+  name: HellBot-ui
+type: Opaque
+data:
+  OPENAI_API_KEY: <base64 encoded key>
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: HellBot-ui
+  name: HellBot-ui
+  labels:
+    app: HellBot-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: HellBot-ui
+  template:
+    metadata:
+      labels:
+        app: HellBot-ui
+    spec:
+      containers:
+        - name: HellBot-ui
+          image: <docker user>/HellBot-ui:latest
+          resources: {}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: HellBot-ui
+                  key: OPENAI_API_KEY
+---
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: HellBot-ui
+  name: HellBot-ui
+  labels:
+    app: HellBot-ui
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 3000
+  selector:
+    app: HellBot-ui
+  type: ClusterIP
