@@ -23,7 +23,7 @@ Expect frequent improvements.
 
 Host your own live version of HellBot UI with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmckaywrigley%2FHellBot-ui)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Raccoon254/Hell-Bot.git)
 
 **Docker**
 
